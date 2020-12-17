@@ -1,0 +1,13 @@
+{% extends 'overall/layout' %}
+{% block appBody %}
+    <form role="form" id="register_form">
+        <input type="text" name="name" placeholder="Nombre" />
+        <input type="email" name="email" placeholder="Email" />
+        <input type="password" name="pass" placeholder="Contraseña" />
+        <input type="password" name="pass_repeat" placeholder="Repetir Contraseña" />
+        <button type="button" id="register">Registrar</button>
+    </form>
+{% endblock %}
+{% block appFooter %}
+    <script src="assets/jscontrollers/register/register.js"></script>
+{% endblock %}

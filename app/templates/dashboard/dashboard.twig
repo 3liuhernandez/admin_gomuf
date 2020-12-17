@@ -1,0 +1,33 @@
+{% extends 'overall/layout' %}
+{% block appBody %}
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-4">
+            <h2>Panel de Control</h2>
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="row">
+
+
+            <div class="col-md-4">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Suscripciones</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">{{ suscription }}</h1>
+                        <div class="stat-percent font-bold text-success">
+                            <a href="suscription">
+                                Listado <i class="fa fa-link"></i>
+                            </a>
+                        </div>
+                        <small>Total</small>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

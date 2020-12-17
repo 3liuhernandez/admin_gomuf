@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    {{ base_assets()|raw }}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ config.build.name }}</title>
+    <link rel="stylesheet" href="assets/framework/main.min.css" />
+
+    <link href="assets/template/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/template/font-awesome/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Ladda -->
+    <link href="assets/template/css/plugins/ladda/ladda-themeless.min.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="assets/template/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+
+    <!-- Sweet Alert -->
+    <link href="assets/template/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    {% block appHeader %}
+    {% endblock %}
+
+    <link href="assets/template/css/animate.css" rel="stylesheet">
+    <link href="assets/template/css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="">
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="rounded-circle" src="assets/template/img/profile_small.jpg"/>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">{{ owner_user.name }}</span>
+                                <span class="text-muted text-xs block">{{ owner_user.email }}<b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="users/edit/{{ owner_user.id_user }}">Editar</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="logout">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="dashboard"><i class="fa fa-diamond"></i> <span class="nav-label">Tablero</span></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Usuarios</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="users/create">Agregar nuevo</a></li>
+                            <li><a href="users">Listado</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="suscription"><i class="fa fa-users"></i> <span class="nav-label">Suscripciones</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+            <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="logout">
+                            <i class="fa fa-sign-out"></i> Cerrar Sesión
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+            {% block appBody %}
+            {% endblock %}
+            
+            <div class="footer">
+                <div>
+                    <strong>Copyright</strong> GOMUF &copy; 2014-2018
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        
+
+    <!-- Mainly scripts -->
+    <script src="assets/template/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/template/js/popper.min.js"></script>
+    <script src="assets/template/js/bootstrap.js"></script>
+    <script src="assets/template/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/template/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+     <!-- Ladda -->
+    <script src="assets/template/js/plugins/ladda/spin.min.js"></script>
+    <script src="assets/template/js/plugins/ladda/ladda.min.js"></script>
+    <script src="assets/template/js/plugins/ladda/ladda.jquery.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="assets/template/js/plugins/toastr/toastr.min.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="assets/template/js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <script src="assets/jscontrollers/overall/toast.js"></script>
+    <script src="assets/jscontrollers/overall/general.js"></script>
+
+    {% block appFooter %}
+    {% endblock %}
+
+    <!-- Custom and plugin javascript -->
+    <script src="assets/template/js/inspinia.js"></script>
+    <script src="assets/template/js/plugins/pace/pace.min.js"></script>
+
+    
+
+
+
+
+</body>
+
+</html>

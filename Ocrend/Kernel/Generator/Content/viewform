@@ -1,0 +1,50 @@
+{% extends 'overall/layout' %}
+{% block appBody %}
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-4">
+            <h2>Nuevo {{view}}</h2>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{view}}">{{view}}</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <strong>Crear nuevo</strong>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>Crear nuevo {{view}}</h5>
+                    </div>
+
+                    <form role="form" id="{{view}}_form">
+                        <div class="ibox-content">
+                            <div class="row">
+
+                                <div class="form-group col-md-6">
+                                    <label for="">input <span class="required">*</span></label> 
+                                    <input type="text" name="" id="" placeholder="" class="form-control">
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="ibox-footer">
+                            <button type="submit" id="{{view}}_btn" class="btn btn-primary"> <i class="fa fa-save"></i> Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block appFooter %}
+    {{ajax_content}}
+{% endblock %}
