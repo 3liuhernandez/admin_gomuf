@@ -12,7 +12,7 @@ database:
     mysql: 
       host: localhost
       user: root
-      pass:
+      pass: 12345
       name: gomuf
       port: default
       socket: default
@@ -39,7 +39,7 @@ twig:
 build:
   production: false
   name: Gomuf
-  url: http://localhost/gomuf-admin/
+  url: http://localhost/gomuf/admin_gomuf/
   timezone: America/Caracas
   version: 3.0.1
 
@@ -59,4 +59,4 @@ api:
 # Configuración de ruta
 router:
   ssl: false
-  path: localhost/gomuf-admin/
+  path: localhost/gomuf/admin_gomuf/

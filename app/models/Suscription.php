@@ -63,12 +63,23 @@ class Suscription extends Models implements IModels {
     public function get() {
         $suscription = $this->db->select('*','suscripcion');
         $result = [];
+        $result_libro = [];
 
         # Si hay reusltados
         if (false != $suscription) {
             # Recorrer
             foreach ($suscription as $s) {
+                $id_libro = $s['id_libro'];
+                $book = $this->db->select('*', 'libros', null, "id_libro = '$id_libro'", 1);
+
+                if (false != $book) {
+                    foreach ($book as $b) {
+                        $libro_name = $b['nombre'];
+                    }
+                }
+
                 $result[] = array(
+                    $libro_name,
                     $s['name'],
                     $s['email'],
                     $s['message'],
